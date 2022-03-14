@@ -8,4 +8,4 @@
 - 预加载
 
 ## 详细请阅读
-https://ysssljl.github.io/blog/handbook/extends.html
+https://ysssljl.github.io/blog/handbook/mirco.html
