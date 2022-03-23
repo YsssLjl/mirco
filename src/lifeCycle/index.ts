@@ -17,7 +17,7 @@ export const runBeforeLoad = async (app: InternalAppInfo) => {
 };
 //* 初始化
 export const runBoostrap = async (app: InternalAppInfo) => {
-  if (app.status !== LifeStatus.LOADED) {
+  if (app.status == LifeStatus.LOADED) {
     return app;
   }
   app.status = LifeStatus.BOOTSTRAPPING;
