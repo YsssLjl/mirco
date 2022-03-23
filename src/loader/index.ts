@@ -1,13 +1,3 @@
-/*
- * @Author: OBKoro1
- * @Date: 2022-03-14 11:54:49
- * @LastEditors: OBKoro1
- * @LastEditTime: 2022-03-14 12:05:30
- * @FilePath: \micro_test\src\loader\index.ts
- * @Description: 
- * 
- * Copyright (c) 2022 by 用户/公司名, All Rights Reserved. 
- */
 import { InternalAppInfo } from '../types'
 import { importEntry } from 'import-html-entry'
 import { ProxySandbox } from './sandbox'
@@ -42,9 +32,10 @@ const runJS = (value: string, app: InternalAppInfo) => {
   if (!app.proxy) {
     app.proxy = new ProxySandbox()
     // 将沙箱挂在全局属性上
-    // @ts-ignore
-    window.__CURRENT_PROXY__ = app.proxy.proxy
+    
   }
+  // @ts-ignore
+  window.__CURRENT_PROXY__ = app.proxy.proxy
   // 激活沙箱
   app.proxy.active()
   // 用沙箱替代全局环境调用 JS
